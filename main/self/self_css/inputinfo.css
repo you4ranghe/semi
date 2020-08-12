@@ -1,0 +1,38 @@
+.nav_center {
+    width :500px;
+
+    justify-content: center;
+    position:absolute;
+    left:33%;
+    top:20%;
+    
+}
+.nav_center fieldset{
+    position: absolute;
+    width:500px;
+    height:700px;
+    font-weight: bold;
+    font-size:18px;
+}
+
+.nav_center ul {
+    position: absolute;;
+    justify-content: center;
+    left:7%;
+    top:10%;
+}
+
+
+.nav_center ul li{
+    list-style-type:none;
+    margin:10px;
+    font-size:18px;
+    font-weight: bold;
+}
+
+.nav_center ul li input{
+    width : 350px;
+    height :20px;
+    font-weight: bold;
+
+}

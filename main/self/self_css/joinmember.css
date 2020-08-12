@@ -1,0 +1,124 @@
+body{
+    margin:0px;
+    font-family : 'Source Sans Pro';
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+    display:flex;
+    justify-content : space-between;
+    /* navbar(div) 안에 있는 구성요소들 사이의 간격을 
+    일정하게(justify) 조정 */
+    align-items:center;
+    /* 아이템들을 수직적으로 중간으로 배치하기 위해 */
+    background-color: #263343;
+    /* padding-top: 8px;
+    padding-left: 12px;
+    padding-right:12px; */
+    padding :8px 12px;
+}
+
+.navbar_logo{
+    font-size:24px;
+    color:white;
+    padding-left:30px ;
+}
+
+.navbar_logo i{
+    color:beige}
+
+.navbar_menu{
+    display:flex;
+    list-style: none;
+    padding-left: 0px;
+
+}
+.navbar_menu li:hover{
+    animation: menumove 0.5s infinite alternate;
+    border-radius: 4px;
+}
+
+.navbar_menu li{
+    padding : 8px 12px;
+    color:beige;
+    /* margin 을 넣으면 클릭할수있는 범위가 작아지기 때문에
+    padding을 주로 써서 간격을 벌려주면 클릭할수 있는 범위가 커진다 */
+}
+
+.navbar_icons{
+    padding-right: 30px;
+    color:beige;
+    list-style-type: none;
+    display: flex;
+    padding-left: 0px;
+}
+.navbar_icons li{
+    padding : 8px 12px;
+}
+
+.navbar_togleBtn{
+    display:none;
+    position: absolute;
+    /* 원래 흐름에서 나와서 우측상단으로 가기 위해선
+    포지션설정부터 한다 */
+    right:32px;
+    font-size :24px;
+    color:beige;
+}
+@keyframes menumove{
+    from{
+        transform : translateX(1.5px);
+        color:mediumturquoise;
+    }
+    to{
+        transform : translateX(-1.5px);
+        color:limegreen;
+        background-color: cornflowerblue;
+    }
+}
+
+
+
+
+/* ============================================ */
+/* 레이아웃 반응형으로만들기 */
+/* media query 사용 */
+/* screen 타입이고 */
+@media screen and (max-width:100%){
+    .navbar{
+        flex-direction: column ;
+        align-items: flex-start;
+        /* 수평으로 컬럼들을 표현 */
+        padding: 8px 12px;
+    }
+    .navbar_menu{
+        display:none;
+        flex-direction: column;
+        align-items:center;
+        width : 100%;
+    }
+    .navbar_menu li{
+        width:100%;
+        text-align: center;
+    }
+
+    .navbar_icons{
+        display:none;
+        justify-content :center;
+        width:100%;
+    }
+
+/* 768px일떄만 나오도록 medei 쿼리에 넣어둔다 */
+    .navbar_togleBtn{
+        display:block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display:flex;
+    }
+
+}

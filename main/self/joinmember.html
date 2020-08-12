@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+     <link rel="stylesheet" href="self_css/joinmember.css">
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="self_css/inputinfo.css">
+     <script src="https://kit.fontawesome.com/27fabf8f47.js"
+      crossorigin="anonymous"></script>
+    <script defer src="self_js/joinmember.js"></script>
+    
+      <!-- 모든파일을 받을떄까지 html 목록이 다뜨게 하면서
+      script 참조내용을 다운을 계속 받을수 있다 defer -->
+
+      <!-- DOM (Document Object Model) -->
+    </head>
+<body>
+    <nav class="navbar">
+
+        <div class="navbar_logo">
+            <i class="fas fa-globe-americas"></i>
+            <a href="">Jeju</a>
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="">WishList</a></li>
+            <li><a href="">Reservation</a></li>
+            <li><a href="">Message</a></li>
+            <li><a href="">Alarm</a></li>
+            <li><a href="">MyPage</a></li>
+        </ul>
+
+        <ul class="navbar_icons">
+            <li><i class="fab fa-twitter-square"></i></li>
+            <li><i class="fab fa-facebook-square"></i></li>
+        </ul>
+
+        
+        <a href="#" class="navbar_togleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <nav class="nav_center">
+        <div id="join">
+            <form action="#" method="post">
+            <fieldset id="input">
+                <legend>회원 가입</legend>
+                        <ul>
+                            <li><label for="name">이름 </label></li>
+                            <li><input type="text" id="name" name="name" placeholder="이름을 입력해주세요"></li>
+                            <li><label for="id">아이디  </label></li>
+                            <li><input type="text" id="id" name="id" placeholder="8~15자"></li>
+                            <li><label for="pwd">비밀번호  </label></li>
+                            <li><input type="password" id="pwd" name="pwd" placeholder="영문,숫자,특수문자 2가지 조합 6~15자"></li>
+                            <li><label for="ckpwd">비밀번호 확인  </label></li>
+                            <li><input type="password" id="ckpwd" name="ckpwd"placeholder="영문,숫자,특수문자 2가지 조합 6~15자"></li>
+                            <li><label for="address">주소  </label></li>
+                            <li><input type="text" id="address" name="address"></li>
+                            <li><label for="number">전화번호  </label></li>
+                            <li><input type="tel" id="number" name="number"  placeholder=" ' - ' 을 제외하고 입력해주세요"></li>
+                            <li><label for="phone" >휴대폰  </label></li>
+                            <li><input type="tel" id="phone" name="phone" placeholder=" ' - ' 을 제외하고 입력해주세요"></li>
+                        </ul>
+                            
+                        
+            </fieldset>
+        </form>
+
+
+
+        </div>
+
+
+
+
+    </nav>
+
+
+    
+</body>
+</html>
